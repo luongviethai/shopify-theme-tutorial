@@ -1,0 +1,39 @@
+<div class="welcome full-width" style="background-color: {{ section.settings.background }};">
+  <h2>{{ section.settings.heading }}</h2>
+  <p>{{ section.settings.content }}</p>
+</div>
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Hello World 1",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to Shopify theme development!"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Welcome to Shopify theme development!</p>"
+    },
+     {
+      "type": "color",
+      "id": "background",
+      "label": "Background color",
+      "default": "#f6f6f7"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hello World Template",
+      "category": "Demo"
+    }
+  ]
+}
+{% endschema %}
